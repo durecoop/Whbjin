@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>2026 두레생협 화천 시농제 초대장</title>
+  <meta name="description" content="2026 두레생협 화천 시농제에 초대합니다. 3월 28일(토) 화천두레축산 가공공장 마당">
+  <meta property="og:title" content="2026 두레생협 화천 시농제 초대장">
+  <meta property="og:description" content="우리 식탁을 지키는 두레와 함께 나누며 풍년농사를 기원합니다">
+  <meta property="og:image" content="images/hero-poster.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #2d5016;
+      --color-primary-light: #4a7c29;
+      --color-accent: #c8a45a;
+      --color-accent-light: #f0e4c4;
+      --color-bg: #faf8f3;
+      --color-bg-warm: #f5f0e6;
+      --color-text: #2c2c2c;
+      --color-text-light: #6b6b6b;
+      --color-white: #ffffff;
+      --color-border: #e0d8c8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      max-width: 100vw;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      background: var(--color-white);
+      min-height: 100vh;
+      box-shadow: 0 0 40px rgba(0,0,0,0.08);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      width: 100%;
+      background: linear-gradient(135deg, #1a3a0a 0%, #2d5016 50%, #3d6b1e 100%);
+      padding: 48px 24px 40px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(200,164,90,0.1) 0%, transparent 70%);
+      animation: shimmer 8s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(5%, 5%); }
+    }
+
+    .hero-decoration {
+      font-size: 32px;
+      margin-bottom: 16px;
+      opacity: 0.9;
+      letter-spacing: 8px;
+    }
+
+    .hero-year {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 14px;
+      color: var(--color-accent);
+      letter-spacing: 6px;
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--color-white);
+      line-height: 1.4;
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    .hero h1 .highlight {
+      color: var(--color-accent);
+    }
+
+    .hero-subtitle {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 15px;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.8;
+      margin-top: 16px;
+      position: relative;
+    }
+
+    .hero-line {
+      width: 40px;
+      height: 2px;
+      background: var(--color-accent);
+      margin: 20px auto;
+      position: relative;
+    }
+
+    /* Hero Image */
+    .hero-image {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Info Cards */
+    .info-section {
+      padding: 40px 24px;
+      background: var(--color-white);
+    }
+
+    .info-card {
+      background: var(--color-bg);
+      border-radius: 16px;
+      padding: 28px 24px;
+      border: 1px solid var(--color-border);
+    }
+
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .info-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .info-row:first-child {
+      padding-top: 0;
+    }
+
+    .info-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+      margin-right: 14px;
+      margin-top: 2px;
+    }
+
+    .info-content {
+      flex: 1;
+    }
+
+    .info-label {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--color-text-light);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .info-value {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-text);
+      line-height: 1.4;
+    }
+
+    .info-value-sub {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--color-text-light);
+      margin-top: 2px;
+      line-height: 1.5;
+    }
+
+    /* Section Title */
+    .section-title {
+      text-align: center;
+      padding: 0 24px;
+      margin-bottom: 28px;
+    }
+
+    .section-title h2 {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      font-size: 13px;
+      color: var(--color-text-light);
+    }
+
+    .section-title-line {
+      width: 30px;
+      height: 2px;
+      background: var(--color-accent);
+      margin: 12px auto 0;
+    }
+
+    /* Photo Banner */
+    .photo-banner {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .photo-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-banner-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.3));
+    }
+
+    /* Schedule */
+    .schedule-section {
+      padding: 40px 24px;
+      background: var(--color-bg-warm);
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 24px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--color-accent), var(--color-primary));
+      border-radius: 1px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 28px 20px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -21px;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--color-white);
+      border: 3px solid var(--color-accent);
+    }
+
+    .timeline-item.highlight-item::before {
+      background: var(--color-accent);
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 4px rgba(200,164,90,0.2);
+    }
+
+    .timeline-time {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--color-primary);
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .timeline-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: 4px;
+    }
+
+    .timeline-desc {
+      font-size: 13px;
+      color: var(--color-text-light);
+      line-height: 1.6;
+    }
+
+    .timeline-badge {
+      display: inline-block;
+      background: var(--color-primary);
+      color: var(--color-white);
+      font-size: 11px;
+      font-weight: 500;
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-top: 6px;
+    }
+
+    /* Yut Game Section */
+    .yut-section {
+      padding: 32px 24px;
+      background: var(--color-white);
+    }
+
+    .yut-card {
+      background: linear-gradient(135deg, #fff9eb, #fff4d9);
+      border-radius: 16px;
+      padding: 24px;
+      border: 1px solid var(--color-accent);
+      text-align: center;
+    }
+
+    .yut-emoji {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .yut-card h3 {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 18px;
+      color: var(--color-primary);
+      margin-bottom: 12px;
+    }
+
+    .yut-card p {
+      font-size: 14px;
+      color: var(--color-text);
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+
+    .yut-prize {
+      display: inline-block;
+      background: var(--color-primary);
+      color: var(--color-white);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-top: 8px;
+    }
+
+    /* Gallery */
+    .gallery-section {
+      padding: 40px 24px;
+      background: var(--color-bg-warm);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .gallery-item {
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 1;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item.wide {
+      grid-column: span 2;
+      aspect-ratio: 16/9;
+    }
+
+    .gallery-caption {
+      text-align: center;
+      font-size: 12px;
+      color: var(--color-text-light);
+      margin-top: 12px;
+      font-style: italic;
+    }
+
+    /* Location */
+    .location-section {
+      padding: 40px 24px;
+      background: var(--color-white);
+    }
+
+    .location-card {
+      background: var(--color-bg);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+    }
+
+    .location-map {
+      width: 100%;
+      height: 200px;
+      background: #e8e3d8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .location-map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .location-info {
+      padding: 20px;
+    }
+
+    .location-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: 6px;
+    }
+
+    .location-address {
+      font-size: 13px;
+      color: var(--color-text-light);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .map-buttons {
+      display: flex;
+      gap: 8px;
+    }
+
+    .map-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .map-btn-naver {
+      background: #03c75a;
+      color: white;
+    }
+
+    .map-btn-kakao {
+      background: #fee500;
+      color: #191919;
+    }
+
+    .map-btn:active {
+      transform: scale(0.97);
+    }
+
+    /* Lunch Menu */
+    .lunch-section {
+      padding: 0 24px 40px;
+      background: var(--color-white);
+    }
+
+    .lunch-card {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+      border-radius: 16px;
+      padding: 24px;
+      color: var(--color-white);
+      text-align: center;
+    }
+
+    .lunch-card h3 {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .lunch-menu-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .lunch-item {
+      background: rgba(255,255,255,0.15);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      backdrop-filter: blur(4px);
+    }
+
+    /* Footer */
+    .footer {
+      padding: 32px 24px;
+      background: var(--color-bg-warm);
+      text-align: center;
+    }
+
+    .footer-host {
+      font-size: 13px;
+      color: var(--color-text-light);
+      margin-bottom: 4px;
+    }
+
+    .footer-org {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 20px;
+    }
+
+    .footer-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--color-border);
+      margin: 0 auto 20px;
+    }
+
+    .footer-message {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 16px;
+      color: var(--color-text);
+      line-height: 1.8;
+    }
+
+    .footer-copy {
+      margin-top: 24px;
+      font-size: 11px;
+      color: #bbb;
+    }
+
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* D-Day Badge */
+    .dday-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      color: var(--color-accent-light);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-top: 16px;
+      position: relative;
+      border: 1px solid rgba(200,164,90,0.3);
+    }
+
+    /* Responsive fine-tuning */
+    @media (max-width: 360px) {
+      .hero h1 { font-size: 26px; }
+      .info-value { font-size: 15px; }
+      .timeline-title { font-size: 15px; }
+    }
+
+    @media (min-width: 481px) {
+      .container {
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-decoration">🌾 🌾 🌾</div>
+      <div class="hero-year">2026</div>
+      <h1>
+        두레생협<br>
+        <span class="highlight">화천 시농제</span>
+      </h1>
+      <div class="hero-line"></div>
+      <p class="hero-subtitle">
+        우리 식탁을 지키는 두레와 함께<br>
+        나누며 풍년농사를 기원합니다
+      </p>
+      <div class="dday-badge" id="ddayBadge"></div>
+    </section>
+
+    <!-- Hero Image -->
+    <div class="hero-image">
+      <img src="images/hero-poster.png" alt="2026 두레생협 화천 시농제" loading="lazy">
+    </div>
+
+    <!-- 행사 정보 -->
+    <section class="info-section fade-in">
+      <div class="info-card">
+        <div class="info-row">
+          <div class="info-icon">📅</div>
+          <div class="info-content">
+            <div class="info-label">일시</div>
+            <div class="info-value">2026년 3월 28일 (토)</div>
+            <div class="info-value-sub">오전 11시부터</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">📍</div>
+          <div class="info-content">
+            <div class="info-label">장소</div>
+            <div class="info-value">화천두레축산 가공공장 마당</div>
+            <div class="info-value-sub">강원특별자치도 화천군 하남면 가마니길 266</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">👥</div>
+          <div class="info-content">
+            <div class="info-label">대상</div>
+            <div class="info-value">두레생협 조합원 및 생산자</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🎊</div>
+          <div class="info-content">
+            <div class="info-label">주요 행사</div>
+            <div class="info-value">기천제 · 농악놀이 · 윷놀이</div>
+            <div class="info-value-sub">소고기 구이와 함께하는 점심 식사</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 농악 사진 배너 -->
+    <div class="photo-banner fade-in">
+      <img src="images/nongak1.jpg" alt="농악놀이" loading="lazy">
+      <div class="photo-banner-overlay"></div>
+    </div>
+
+    <!-- 행사 일정 -->
+    <section class="schedule-section">
+      <div class="section-title fade-in">
+        <h2>행사 일정</h2>
+        <p>함께하는 하루, 정성이 담긴 시간</p>
+        <div class="section-title-line"></div>
+      </div>
+
+      <div class="timeline fade-in">
+        <div class="timeline-item">
+          <div class="timeline-time">10:40 ~</div>
+          <div class="timeline-title">🥁 농악놀이 (식전행사)</div>
+          <div class="timeline-desc">하남면 농악대의 신명나는 풍물놀이로 행사의 시작을 알립니다</div>
+        </div>
+
+        <div class="timeline-item highlight-item">
+          <div class="timeline-time">11:00 ~ 12:00</div>
+          <div class="timeline-title">🙏 기천제</div>
+          <div class="timeline-desc">
+            내·외빈 소개 및 축사<br>
+            풍년농사를 기원하는 기천제 진행
+          </div>
+          <span class="timeline-badge">메인 행사</span>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">12:00 ~ 13:00</div>
+          <div class="timeline-title">🍖 점심 식사</div>
+          <div class="timeline-desc">소고기 구이, 떡국, 나물류 등 정성 가득한 식사</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">13:00 ~ 15:00</div>
+          <div class="timeline-title">🎯 윷놀이 한마당</div>
+          <div class="timeline-desc">참여 티켓 10,000원<br>1·2·3등 소고기 세트 경품!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 점심 메뉴 -->
+    <section class="lunch-section">
+      <div class="lunch-card fade-in">
+        <h3>🍽️ 점심 메뉴</h3>
+        <div class="lunch-menu-grid">
+          <span class="lunch-item">소고기 구이</span>
+          <span class="lunch-item">떡국</span>
+          <span class="lunch-item">김치</span>
+          <span class="lunch-item">떡</span>
+          <span class="lunch-item">나물류</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 윷놀이 안내 -->
+    <section class="yut-section">
+      <div class="yut-card fade-in">
+        <div class="yut-emoji">🎲</div>
+        <h3>윷놀이 한마당</h3>
+        <p>
+          참여 티켓 <strong>10,000원</strong>을 구입 후<br>
+          윷놀이에 참여해 주세요!
+        </p>
+        <p style="font-size:13px; color:var(--color-text-light);">
+          많이 취득한 순서대로 1·2·3등에게
+        </p>
+        <div class="yut-prize">🥩 소고기 세트 경품 증정</div>
+      </div>
+    </section>
+
+    <!-- 갤러리 -->
+    <section class="gallery-section">
+      <div class="section-title fade-in">
+        <h2>지난 행사 돌아보기</h2>
+        <p>함께했던 소중한 순간들</p>
+        <div class="section-title-line"></div>
+      </div>
+
+      <div class="gallery-grid fade-in">
+        <div class="gallery-item wide">
+          <img src="images/event-indoor.jpg" alt="시농제 행사" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/ceremony.jpg" alt="기천제" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/nongak2.png" alt="농악놀이" loading="lazy">
+        </div>
+      </div>
+      <p class="gallery-caption">* 이전 시농제 행사 모습입니다</p>
+    </section>
+
+    <!-- 오시는 길 -->
+    <section class="location-section">
+      <div class="section-title fade-in">
+        <h2>오시는 길</h2>
+        <div class="section-title-line"></div>
+      </div>
+
+      <div class="location-card fade-in">
+        <div class="location-map">
+          <iframe
+            src="https://www.google.com/maps?q=강원특별자치도+화천군+하남면+가마니길+266&output=embed"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div class="location-info">
+          <div class="location-name">화천두레축산 가공공장 마당</div>
+          <div class="location-address">
+            강원특별자치도 화천군 하남면 가마니길 266
+          </div>
+          <div class="map-buttons">
+            <a href="https://map.naver.com/v5/search/강원특별자치도 화천군 하남면 가마니길 266"
+               target="_blank" rel="noopener" class="map-btn map-btn-naver">
+              🗺️ 네이버지도
+            </a>
+            <a href="https://map.kakao.com/?q=강원특별자치도 화천군 하남면 가마니길 266"
+               target="_blank" rel="noopener" class="map-btn map-btn-kakao">
+              🗺️ 카카오맵
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-host">주최</div>
+      <div class="footer-org">
+        화천두레영농조합법인<br>
+        농업회사법인 두레축산(주)
+      </div>
+      <div class="footer-divider"></div>
+      <p class="footer-message">
+        풍년농사를 기원하며<br>
+        여러분을 초대합니다 🌾
+      </p>
+      <p class="footer-copy">&copy; 2026 두레생협 화천 시농제</p>
+    </footer>
+
+  </div>
+
+  <script>
+    // D-Day 계산
+    function updateDday() {
+      const eventDate = new Date('2026-03-28T11:00:00+09:00');
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const eventDay = new Date(eventDate);
+      eventDay.setHours(0, 0, 0, 0);
+      const diff = Math.ceil((eventDay - today) / (1000 * 60 * 60 * 24));
+      const badge = document.getElementById('ddayBadge');
+      if (diff > 0) {
+        badge.textContent = '🗓️ D-' + diff;
+      } else if (diff === 0) {
+        badge.textContent = '🎉 오늘 행사합니다!';
+      } else {
+        badge.textContent = '행사가 종료되었습니다';
+      }
+    }
+    updateDday();
+
+    // Scroll Animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
