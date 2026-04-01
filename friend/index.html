@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>두레생산자회 동지회 창립총회</title>
+  <meta name="description" content="씨앗의 헌신으로 열매의 희망을 틔우다 - 두레생산자회 동지회 창립총회">
+  <meta property="og:title" content="두레생산자회 동지회 창립총회">
+  <meta property="og:description" content="씨앗의 헌신으로 열매의 희망을 틔우다 - 함께 걸어온 시간, 함께 걸어갈 길">
+  <meta property="og:image" content="KakaoTalk_20260401_133839849.jpg">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=Nanum+Myeongjo:wght@400;700;800&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #F5F0E8;
+      --paper-warm: #EDE4D3;
+      --cream: #FAF7F0;
+      --brown: #5C4033;
+      --brown-light: #8B7355;
+      --brown-soft: #A69279;
+      --green: #5B7A5E;
+      --green-soft: #7A9E7E;
+      --gold: #C4A265;
+      --gold-light: #E0CFA6;
+      --red-warm: #B85C50;
+      --text: #3A2E25;
+      --text-light: #7A6B5D;
+      --text-faint: #A99E90;
+      --shadow: rgba(60, 40, 20, 0.08);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #C9BDAA;
+      color: var(--text);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      transition: font-size 0.3s ease;
+    }
+
+    /* ── 글씨 크기 단계 ── */
+    body.font-size-1 { font-size: 16px; }
+    body.font-size-2 { font-size: 19px; }
+    body.font-size-3 { font-size: 22px; }
+
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      background: var(--cream);
+      min-height: 100vh;
+      position: relative;
+      box-shadow: 0 0 30px rgba(0,0,0,0.12);
+    }
+
+    /* ── 한지 질감 오버레이 ── */
+    .container::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* ── 스크롤 애니메이션 ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-in-slow {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1.2s ease, transform 1.2s ease;
+    }
+    .fade-in-slow.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ══════════════════════════════
+       글씨 크기 조절 버튼 (플로팅)
+       ══════════════════════════════ */
+    .font-control {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 9998;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 24px;
+      padding: 6px 8px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+      backdrop-filter: blur(8px);
+    }
+    .font-btn {
+      width: 36px;
+      height: 36px;
+      border: 2px solid var(--gold-light);
+      border-radius: 50%;
+      background: white;
+      color: var(--brown);
+      font-family: 'Nanum Myeongjo', serif;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+    .font-btn.active {
+      background: var(--green);
+      color: white;
+      border-color: var(--green);
+    }
+    .font-btn:active { transform: scale(0.92); }
+    .font-btn-s { font-size: 13px; }
+    .font-btn-m { font-size: 16px; }
+    .font-btn-l { font-size: 19px; }
+
+    /* ══════════════════════════════
+       첫 방문 가이드 팁
+       ══════════════════════════════ */
+    .guide-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 10001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      animation: guideFadeIn 0.6s ease 0.5s forwards;
+    }
+    .guide-overlay.hidden { display: none; }
+    @keyframes guideFadeIn {
+      to { opacity: 1; }
+    }
+    .guide-card {
+      background: white;
+      border-radius: 20px;
+      padding: 36px 28px;
+      max-width: 340px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      transform: translateY(30px);
+      animation: guideSlideUp 0.6s ease 0.5s forwards;
+    }
+    @keyframes guideSlideUp {
+      to { transform: translateY(0); }
+    }
+    .guide-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+    .guide-title {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--brown);
+      margin-bottom: 16px;
+    }
+    .guide-desc {
+      font-size: 15px;
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 8px;
+      word-break: keep-all;
+    }
+    .guide-demo {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin: 20px 0;
+    }
+    .guide-demo-btn {
+      width: 40px; height: 40px;
+      border: 2px solid var(--gold-light);
+      border-radius: 50%;
+      background: white;
+      color: var(--brown);
+      font-family: 'Nanum Myeongjo', serif;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .guide-demo-btn.demo-active {
+      background: var(--green);
+      color: white;
+      border-color: var(--green);
+    }
+    .guide-arrow {
+      color: var(--text-faint);
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+    .guide-close-btn {
+      display: inline-block;
+      padding: 14px 40px;
+      background: var(--green);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .guide-close-btn:active { transform: scale(0.96); }
+
+    /* ══════════════════════════════
+       음악 컨트롤 (플로팅)
+       ══════════════════════════════ */
+    .music-control {
+      position: fixed;
+      bottom: 20px;
+      right: 16px;
+      z-index: 9998;
+    }
+    .music-btn {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255,255,255,0.95);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease, background 0.3s ease;
+      backdrop-filter: blur(8px);
+    }
+    .music-btn:active { transform: scale(0.92); }
+    .music-btn.playing {
+      background: var(--green);
+    }
+    .music-btn svg { width: 24px; height: 24px; }
+    .music-btn.playing svg { fill: white; stroke: white; }
+
+    /* 음파 애니메이션 */
+    .music-waves {
+      display: none;
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      gap: 2px;
+    }
+    .music-btn.playing + .music-waves,
+    .music-btn.playing ~ .music-waves { display: flex; }
+    .wave-bar {
+      width: 3px;
+      background: var(--green);
+      border-radius: 2px;
+      animation: waveAnim 0.8s ease-in-out infinite;
+    }
+    .wave-bar:nth-child(1) { height: 8px; animation-delay: 0s; }
+    .wave-bar:nth-child(2) { height: 12px; animation-delay: 0.15s; }
+    .wave-bar:nth-child(3) { height: 6px; animation-delay: 0.3s; }
+    .wave-bar:nth-child(4) { height: 10px; animation-delay: 0.45s; }
+    @keyframes waveAnim {
+      0%, 100% { transform: scaleY(0.4); }
+      50% { transform: scaleY(1); }
+    }
+
+    .music-label {
+      position: absolute;
+      right: 60px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.95);
+      padding: 6px 14px;
+      border-radius: 16px;
+      font-size: 12px;
+      color: var(--brown-soft);
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+    .music-label.show { opacity: 1; }
+
+    /* YouTube iframe 숨김 */
+    .yt-player-wrap {
+      position: fixed;
+      bottom: -200px;
+      left: -200px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* ── 히어로 섹션 ── */
+    .hero {
+      position: relative;
+      padding: 70px 30px 50px;
+      background: linear-gradient(180deg, var(--paper-warm) 0%, var(--cream) 100%);
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--brown-soft), var(--gold));
+    }
+
+    .hero-label {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 0.8em;
+      font-weight: 400;
+      color: var(--brown-soft);
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 1.7em;
+      font-weight: 800;
+      color: var(--brown);
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .hero-subtitle {
+      font-family: 'Nanum Pen Script', cursive;
+      font-size: 1.35em;
+      color: var(--green);
+      margin-bottom: 24px;
+    }
+    .hero-date {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 0.95em;
+      color: var(--text-light);
+      letter-spacing: 1px;
+    }
+    .hero-line {
+      width: 40px;
+      height: 2px;
+      background: var(--gold);
+      margin: 20px auto 0;
+    }
+
+    /* ── 공통 섹션 ── */
+    section {
+      padding: 40px 28px;
+    }
+    .section-divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+    }
+
+    /* ── 인사말 ── */
+    .greeting {
+      background: var(--cream);
+    }
+    .greeting-text {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 1em;
+      line-height: 2;
+      color: var(--text);
+      word-break: keep-all;
+    }
+    .greeting-text .highlight {
+      color: var(--brown);
+      font-weight: 700;
+    }
+    .greeting-text .number {
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    /* ── 단체사진 ── */
+    .group-photo { padding: 0; }
+    .group-photo img { width: 100%; display: block; }
+    .group-photo-caption {
+      text-align: center;
+      padding: 16px 28px 0;
+      font-family: 'Gaegu', cursive;
+      font-size: 1.1em;
+      color: var(--brown-soft);
+    }
+
+    /* ══════════════════════════════
+       키워드 감동 섹션
+       ══════════════════════════════ */
+    .keyword-section {
+      background: linear-gradient(180deg, #3A2E25 0%, #2A1F15 100%);
+      padding: 60px 28px;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .keyword-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at center, rgba(196,162,101,0.08) 0%, transparent 70%);
+    }
+    .keyword-intro {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 0.85em;
+      color: var(--gold-light);
+      letter-spacing: 4px;
+      margin-bottom: 40px;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+    .keyword-intro.visible { opacity: 1; }
+
+    .keyword-stage {
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      position: relative;
+    }
+
+    .keyword-word {
+      font-family: 'Nanum Myeongjo', serif;
+      font-weight: 800;
+      color: transparent;
+      opacity: 0;
+      transform: translateY(40px) scale(0.8);
+      transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+    .keyword-word.appear {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    .keyword-word.size-xl {
+      font-size: 2.8em;
+      background: linear-gradient(135deg, var(--gold) 0%, #E8D5A0 50%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+    .keyword-word.size-lg {
+      font-size: 2em;
+      background: linear-gradient(135deg, var(--green-soft) 0%, #A8D4A0 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+    .keyword-word.size-md {
+      font-size: 1.5em;
+      background: linear-gradient(135deg, #C8A84E 0%, #E0CFA6 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+    .keyword-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: baseline;
+    }
+
+    .keyword-final {
+      margin-top: 36px;
+      font-family: 'Nanum Pen Script', cursive;
+      font-size: 1.8em;
+      color: transparent;
+      background: linear-gradient(135deg, #E8D5A0, #FFFFFF, #E8D5A0);
+      -webkit-background-clip: text;
+      background-clip: text;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1.2s ease 0.5s;
+    }
+    .keyword-final.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* 떠다니는 빛 효과 */
+    .floating-light {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: var(--gold-light);
+      border-radius: 50%;
+      opacity: 0;
+      animation: floatUp 4s ease-in-out infinite;
+    }
+    @keyframes floatUp {
+      0% { opacity: 0; transform: translateY(100px); }
+      20% { opacity: 0.6; }
+      80% { opacity: 0.3; }
+      100% { opacity: 0; transform: translateY(-200px); }
+    }
+
+    /* ── 선언문 ── */
+    .declaration {
+      background: var(--paper-warm);
+      padding: 50px 28px;
+    }
+    .declaration-title {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 0.85em;
+      color: var(--brown-soft);
+      text-align: center;
+      letter-spacing: 6px;
+      margin-bottom: 20px;
+    }
+    .declaration-main-title {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 1.5em;
+      font-weight: 800;
+      color: var(--brown);
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+    .declaration-body p {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 0.95em;
+      line-height: 1.95;
+      color: var(--text);
+      margin-bottom: 20px;
+      word-break: keep-all;
+      text-align: justify;
+    }
+    .declaration-body .pledge {
+      padding-left: 16px;
+      border-left: 3px solid var(--gold-light);
+      margin: 24px 0;
+      font-style: italic;
+    }
+    .declaration-body .pledge strong {
+      color: var(--green);
+      font-style: normal;
+    }
+    .declaration-date {
+      text-align: center;
+      margin-top: 36px;
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 0.95em;
+      color: var(--text-light);
+      line-height: 2;
+    }
+
+    /* ── 총회 순서 타임라인 ── */
+    .timeline { background: var(--cream); }
+    .section-title {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 1.25em;
+      font-weight: 800;
+      color: var(--brown);
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .section-title-sub {
+      display: block;
+      font-family: 'Gaegu', cursive;
+      font-size: 0.78em;
+      font-weight: 400;
+      color: var(--brown-soft);
+      margin-top: 6px;
+    }
+    .timeline-list {
+      list-style: none;
+      position: relative;
+      padding-left: 24px;
+    }
+    .timeline-list::before {
+      content: '';
+      position: absolute;
+      left: 6px; top: 8px; bottom: 8px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--gold-light), var(--green-soft), var(--gold-light));
+    }
+    .timeline-item {
+      position: relative;
+      padding: 0 0 28px 20px;
+    }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -21px; top: 8px;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 2px solid var(--cream);
+    }
+    .timeline-item-title {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 1em;
+      font-weight: 700;
+      color: var(--brown);
+      margin-bottom: 4px;
+    }
+    .timeline-item-desc {
+      font-size: 0.875em;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* ── 포토 갤러리 ── */
+    .gallery {
+      background: var(--paper-warm);
+      padding: 40px 0;
+    }
+    .gallery .section-title { padding: 0 28px; }
+    .gallery-scroll {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 14px;
+      padding: 0 28px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .gallery-scroll::-webkit-scrollbar { display: none; }
+    .gallery-item {
+      flex: 0 0 85%;
+      scroll-snap-align: center;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px var(--shadow);
+      background: white;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:active { transform: scale(0.98); }
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-item-caption {
+      padding: 12px 16px;
+      font-family: 'Gaegu', cursive;
+      font-size: 1em;
+      color: var(--brown-soft);
+      text-align: center;
+      background: white;
+    }
+    .gallery-hint {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 0.8em;
+      color: var(--text-faint);
+      letter-spacing: 1px;
+    }
+
+    /* ── 라이트박스 ── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 10000;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox img {
+      max-width: 95%;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 16px; right: 20px;
+      color: white; font-size: 32px;
+      cursor: pointer;
+      width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%; border: none;
+    }
+    .lightbox-nav {
+      position: absolute; top: 50%;
+      transform: translateY(-50%);
+      color: white; font-size: 28px; cursor: pointer;
+      width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%; border: none;
+    }
+    .lightbox-prev { left: 10px; }
+    .lightbox-next { right: 10px; }
+    .lightbox-counter {
+      color: rgba(255,255,255,0.6);
+      font-size: 14px;
+      margin-top: 16px;
+    }
+
+    /* ── 임원 소개 ── */
+    .officers { background: var(--cream); }
+    .officer-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .officer-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px var(--shadow);
+    }
+    .officer-badge {
+      flex: 0 0 auto;
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 1em;
+      font-weight: 700;
+      color: white;
+    }
+    .officer-badge.president { background: var(--green); }
+    .officer-badge.secretary { background: var(--brown-soft); }
+    .officer-badge.auditor { background: var(--gold); }
+    .officer-name {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 1.1em;
+      font-weight: 700;
+      color: var(--brown);
+    }
+    .officer-role {
+      font-size: 0.8em;
+      color: var(--text-light);
+      margin-top: 2px;
+    }
+
+    /* ── 회원 명단 ── */
+    .members { background: var(--paper-warm); }
+    .members-intro {
+      text-align: center;
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 0.95em;
+      color: var(--text-light);
+      margin-bottom: 24px;
+      line-height: 1.8;
+    }
+    .members-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+    .member-name {
+      display: inline-block;
+      padding: 8px 14px;
+      background: white;
+      border-radius: 20px;
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 0.875em;
+      color: var(--brown);
+      box-shadow: 0 1px 6px var(--shadow);
+    }
+    .members-count {
+      text-align: center;
+      margin-top: 20px;
+      font-family: 'Gaegu', cursive;
+      font-size: 1.25em;
+      color: var(--green);
+    }
+    .members-welcome {
+      text-align: center;
+      margin-top: 16px;
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 0.875em;
+      color: var(--text-faint);
+      line-height: 1.8;
+    }
+
+    /* ── 입회 안내 ── */
+    .join {
+      background: var(--cream);
+      text-align: center;
+    }
+    .join-message {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 1em;
+      color: var(--text);
+      line-height: 2;
+      margin-bottom: 28px;
+      word-break: keep-all;
+    }
+    .account-box {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 2px 16px var(--shadow);
+      margin-bottom: 12px;
+    }
+    .account-bank {
+      font-size: 0.8em;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+    .account-number {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 1.25em;
+      font-weight: 700;
+      color: var(--brown);
+      letter-spacing: 1px;
+    }
+    .account-name {
+      font-size: 0.875em;
+      color: var(--text-light);
+      margin-top: 6px;
+    }
+    .copy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      padding: 12px 28px;
+      background: var(--green);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 0.95em;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .copy-btn:active {
+      transform: scale(0.96);
+      background: var(--green-soft);
+    }
+    .copy-toast {
+      display: none;
+      margin-top: 12px;
+      padding: 10px 20px;
+      background: var(--brown);
+      color: white;
+      border-radius: 20px;
+      font-size: 0.875em;
+      animation: toastFade 2s ease forwards;
+    }
+    @keyframes toastFade {
+      0% { opacity: 0; transform: translateY(10px); }
+      15% { opacity: 1; transform: translateY(0); }
+      70% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    /* ── 다음 모임 ── */
+    .next-meeting {
+      background: var(--paper-warm);
+      text-align: center;
+    }
+    .next-meeting-text {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 1em;
+      color: var(--text);
+      line-height: 2;
+      word-break: keep-all;
+    }
+    .next-meeting-highlight {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 12px 24px;
+      background: white;
+      border-radius: 8px;
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 0.95em;
+      color: var(--green);
+      font-weight: 700;
+      box-shadow: 0 2px 12px var(--shadow);
+    }
+
+    /* ── 공유 버튼 ── */
+    .share {
+      background: var(--cream);
+      text-align: center;
+      padding: 40px 28px 30px;
+    }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      background: #FEE500;
+      color: #191919;
+      border: none;
+      border-radius: 10px;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 0.95em;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      box-shadow: 0 2px 12px rgba(254, 229, 0, 0.3);
+    }
+    .share-btn:active { transform: scale(0.96); }
+    .share-btn svg { width: 22px; height: 22px; }
+
+    /* ── 푸터 ── */
+    .footer {
+      background: var(--paper-warm);
+      text-align: center;
+      padding: 40px 28px 50px;
+    }
+    .footer-slogan {
+      font-family: 'Nanum Pen Script', cursive;
+      font-size: 1.75em;
+      color: var(--green);
+      margin-bottom: 16px;
+    }
+    .footer-org {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 0.875em;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+    .footer-bottom {
+      margin-top: 30px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+    }
+
+    /* ── 유틸 ── */
+    .spacer { height: 20px; }
+    .soft-divider {
+      text-align: center;
+      padding: 24px 0;
+      font-size: 16px;
+      color: var(--gold-light);
+      letter-spacing: 16px;
+    }
+  </style>
+</head>
+<body class="font-size-1">
+
+<!-- ══ 첫 방문 가이드 팁 ══ -->
+<div class="guide-overlay" id="guideOverlay">
+  <div class="guide-card">
+    <div class="guide-icon">Aa</div>
+    <h2 class="guide-title">글씨가 작으신가요?</h2>
+    <p class="guide-desc">
+      오른쪽 위의 버튼으로<br>글씨 크기를 조절할 수 있습니다
+    </p>
+    <div class="guide-demo">
+      <div class="guide-demo-btn" style="font-size:13px;">가</div>
+      <div class="guide-demo-btn" style="font-size:16px;">가</div>
+      <div class="guide-demo-btn demo-active" style="font-size:19px;">가</div>
+    </div>
+    <p class="guide-arrow">눈이 편한 크기를 선택해보세요</p>
+    <button class="guide-close-btn" onclick="closeGuide()">확인했습니다</button>
+  </div>
+</div>
+
+<!-- ══ 글씨 크기 조절 (플로팅) ══ -->
+<div class="font-control" id="fontControl">
+  <button class="font-btn font-btn-s active" onclick="setFontSize(1)" title="보통">가</button>
+  <button class="font-btn font-btn-m" onclick="setFontSize(2)" title="크게">가</button>
+  <button class="font-btn font-btn-l" onclick="setFontSize(3)" title="아주 크게">가</button>
+</div>
+
+<!-- ══ 음악 컨트롤 (플로팅) ══ -->
+<div class="music-control">
+  <span class="music-label" id="musicLabel">사람이 꽃보다 아름다워</span>
+  <button class="music-btn" id="musicBtn" onclick="toggleMusic()">
+    <!-- 재생 아이콘 -->
+    <svg id="playIcon" viewBox="0 0 24 24" fill="var(--green)" stroke="none">
+      <polygon points="6,3 20,12 6,21"/>
+    </svg>
+    <!-- 일시정지 아이콘 (숨김) -->
+    <svg id="pauseIcon" viewBox="0 0 24 24" fill="var(--green)" stroke="none" style="display:none;">
+      <rect x="5" y="3" width="5" height="18" rx="1"/>
+      <rect x="14" y="3" width="5" height="18" rx="1"/>
+    </svg>
+  </button>
+  <div class="music-waves" id="musicWaves">
+    <div class="wave-bar"></div>
+    <div class="wave-bar"></div>
+    <div class="wave-bar"></div>
+    <div class="wave-bar"></div>
+  </div>
+</div>
+
+<!-- YouTube Player (숨김) -->
+<div class="yt-player-wrap">
+  <div id="ytPlayer"></div>
+</div>
+
+<div class="container">
+
+  <!-- ── 히어로 ── -->
+  <header class="hero">
+    <p class="hero-label fade-in">2 0 2 6</p>
+    <h1 class="hero-title fade-in">(사)두레생산자회<br>동지회 창립총회</h1>
+    <p class="hero-subtitle fade-in">씨앗의 헌신으로 열매의 희망을 틔우다</p>
+    <p class="hero-date fade-in">2026년 3월 19일</p>
+    <div class="hero-line fade-in"></div>
+  </header>
+
+  <div class="soft-divider">- - -</div>
+
+  <!-- ── 인사말 ── -->
+  <section class="greeting">
+    <div class="fade-in">
+      <p class="greeting-text">
+        지난 3월 19일, 두레생산자회 전현직 임원 <span class="number">25</span>분과
+        두레생협연합회 전현직 임원 <span class="number">20</span>여 분이 참석한 가운데
+        <span class="highlight">두레생산자회 동지회</span>가 첫발을 내디뎠습니다.
+      </p>
+    </div>
+    <div class="spacer"></div>
+    <div class="fade-in">
+      <p class="greeting-text">
+        한국 생협의 역사 <span class="number">41</span>년,
+        두레생협연합회 <span class="number">29</span>년,
+        두레생산자회 <span class="number">23</span>년......
+      </p>
+    </div>
+    <div class="spacer"></div>
+    <div class="fade-in-slow">
+      <p class="greeting-text">
+        의미 있는 시간들이<br>
+        함께 걸어온 시간 속에<br>
+        차곡차곡 쌓여갑니다.
+      </p>
+    </div>
+    <div class="spacer"></div>
+    <div class="fade-in-slow">
+      <p class="greeting-text" style="text-align: center;">
+        그 뜨거웠던 발걸음들을<br>
+        가끔씩 꺼내 보며<br>
+        오래도록 두레생협과 함께<br>
+        걸어가기로 했습니다.
+      </p>
+    </div>
+    <div class="spacer"></div>
+    <div class="fade-in-slow">
+      <p class="greeting-text" style="text-align: center; font-size: 1.15em;">
+        <span class="highlight">모두모두 고맙습니다.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ── 단체사진 ── -->
+  <div class="group-photo fade-in">
+    <img src="KakaoTalk_20260401_133839849.jpg" alt="두레동지회 창립총회 단체사진" loading="lazy">
+    <p class="group-photo-caption">함께여서 든든한 우리</p>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- ══════════════════════════════
+       키워드 감동 섹션
+       ══════════════════════════════ -->
+  <section class="keyword-section" id="keywordSection">
+    <!-- 떠다니는 빛 -->
+    <div class="floating-light" style="left:10%; animation-delay:0s;"></div>
+    <div class="floating-light" style="left:30%; animation-delay:1.2s;"></div>
+    <div class="floating-light" style="left:55%; animation-delay:0.6s;"></div>
+    <div class="floating-light" style="left:75%; animation-delay:1.8s;"></div>
+    <div class="floating-light" style="left:90%; animation-delay:2.4s;"></div>
+
+    <p class="keyword-intro" id="keywordIntro">우 리 가 함 께 한 말</p>
+
+    <div class="keyword-stage" id="keywordStage">
+      <div class="keyword-word size-xl" data-delay="400">흙</div>
+      <div class="keyword-row">
+        <div class="keyword-word size-lg" data-delay="900">씨앗</div>
+        <div class="keyword-word size-md" data-delay="1200">헌신</div>
+      </div>
+      <div class="keyword-word size-xl" data-delay="1600">열매</div>
+      <div class="keyword-row">
+        <div class="keyword-word size-md" data-delay="2000">생명</div>
+        <div class="keyword-word size-lg" data-delay="2300">협동</div>
+      </div>
+      <div class="keyword-row">
+        <div class="keyword-word size-lg" data-delay="2700">상생</div>
+        <div class="keyword-word size-md" data-delay="3000">땀방울</div>
+      </div>
+      <div class="keyword-word size-xl" data-delay="3400">동지</div>
+      <div class="keyword-row">
+        <div class="keyword-word size-md" data-delay="3800">우정</div>
+        <div class="keyword-word size-lg" data-delay="4100">가치</div>
+        <div class="keyword-word size-md" data-delay="4400">뿌리</div>
+      </div>
+      <div class="keyword-final" data-delay="5000">함께 걸어온 시간, 함께 걸어갈 길</div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ── 총회 순서 ── -->
+  <section class="timeline">
+    <h2 class="section-title fade-in">
+      창립총회 이모저모
+      <span class="section-title-sub">함께한 그날의 기록</span>
+    </h2>
+    <ul class="timeline-list">
+      <li class="timeline-item fade-in">
+        <div class="timeline-item-title">선서 및 낭독</div>
+        <div class="timeline-item-desc">한마음으로 두레의 뜻을 되새기며</div>
+      </li>
+      <li class="timeline-item fade-in">
+        <div class="timeline-item-title">규약 정립 및 안건 심의</div>
+        <div class="timeline-item-desc">동지회의 첫 틀을 함께 만들다</div>
+      </li>
+      <li class="timeline-item fade-in">
+        <div class="timeline-item-title">기념사</div>
+        <div class="timeline-item-desc">두레생산자회 회장 이완용</div>
+      </li>
+      <li class="timeline-item fade-in">
+        <div class="timeline-item-title">임원 선출</div>
+        <div class="timeline-item-desc">동지회를 이끌어갈 세 분의 선출</div>
+      </li>
+      <li class="timeline-item fade-in">
+        <div class="timeline-item-title">감사패 수여</div>
+        <div class="timeline-item-desc">함께! 고마움!</div>
+      </li>
+      <li class="timeline-item fade-in">
+        <div class="timeline-item-title">창립 선언문 낭독</div>
+        <div class="timeline-item-desc">씨앗의 헌신으로 열매의 희망을 틔우다</div>
+      </li>
+      <li class="timeline-item fade-in">
+        <div class="timeline-item-title">회원 한마디</div>
+        <div class="timeline-item-desc">뜨거운 마음을 나누며</div>
+      </li>
+    </ul>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ── 포토 갤러리 ── -->
+  <section class="gallery" id="gallery">
+    <h2 class="section-title fade-in">
+      그날의 풍경
+      <span class="section-title-sub">사진을 터치하면 크게 볼 수 있어요</span>
+    </h2>
+    <div class="gallery-scroll">
+      <div class="gallery-item" onclick="openLightbox(0)">
+        <img src="KakaoTalk_20260401_133839849_01.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">한마음 선서</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(1)">
+        <img src="KakaoTalk_20260401_133839849_02.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">안건 심의</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(2)">
+        <img src="KakaoTalk_20260401_133839849_03.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">두레의 이야기</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(3)">
+        <img src="KakaoTalk_20260401_133839849_04.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">함께! 고마움!</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(4)">
+        <img src="KakaoTalk_20260401_133839849_05.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">감사패 수여</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(5)">
+        <img src="KakaoTalk_20260401_133839849_06.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">감사패 수여</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(6)">
+        <img src="KakaoTalk_20260401_133839849_07.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">감사패 수여</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(7)">
+        <img src="KakaoTalk_20260401_133839849_08.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">감사패 수여</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(8)">
+        <img src="KakaoTalk_20260401_133839849_09.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">함께한 자리</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(9)">
+        <img src="KakaoTalk_20260401_133839849_10.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">기념사</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(10)">
+        <img src="KakaoTalk_20260401_133839849_11.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">회원의 한마디</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(11)">
+        <img src="KakaoTalk_20260401_133839849_12.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">회원의 한마디</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(12)">
+        <img src="KakaoTalk_20260401_133839849_13.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">회원의 한마디</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(13)">
+        <img src="KakaoTalk_20260401_133839849_14.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">회원의 한마디</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(14)">
+        <img src="KakaoTalk_20260401_133839849_15.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">함께한 자리</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(15)">
+        <img src="KakaoTalk_20260401_133839849_16.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">회원의 한마디</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(16)">
+        <img src="KakaoTalk_20260401_133839849_17.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">회원의 한마디</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(17)">
+        <img src="KakaoTalk_20260401_133839849_18.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">회원의 한마디</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(18)">
+        <img src="KakaoTalk_20260401_133839849_19.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">회원의 한마디</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(19)">
+        <img src="KakaoTalk_20260401_133839849_20.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">회원의 한마디</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(20)">
+        <img src="KakaoTalk_20260401_133839849_21.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">회원의 한마디</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(21)">
+        <img src="KakaoTalk_20260401_133839849_22.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">회원의 한마디</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(22)">
+        <img src="KakaoTalk_20260401_133839849_23.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">회원의 한마디</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(23)">
+        <img src="KakaoTalk_20260401_133839849_24.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">회원의 한마디</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(24)">
+        <img src="KakaoTalk_20260401_133839849_25.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">함께한 자리</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(25)">
+        <img src="KakaoTalk_20260401_133839849_26.jpg" alt="" loading="lazy">
+        <div class="gallery-item-caption">함께한 자리</div>
+      </div>
+    </div>
+    <p class="gallery-hint fade-in">&larr; 옆으로 넘겨보세요 &rarr;</p>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ── 창립 선언문 ── -->
+  <section class="declaration">
+    <p class="declaration-title fade-in">창 립 선 언 문</p>
+    <h2 class="declaration-main-title fade-in">씨앗의 헌신으로<br>열매의 희망을 틔우다</h2>
+
+    <div class="declaration-body">
+      <p class="fade-in">
+        오늘 우리는 한결같은 마음으로 흙을 일구고 두레의 가치를 키워온 동지들과 함께
+        두레생산자회 임원 동지회의 첫걸음을 내딛고자 이 자리에 모였습니다.
+      </p>
+      <p class="fade-in">
+        돌이켜보면 우리가 지나온 시간은 인고의 씨앗을 심는 과정이었습니다.
+        척박한 땅에서 생명 농업의 기틀을 잡고, 생산자와 소비자가 상생하는 협동의 길을 닦기 위해
+        우리는 누구보다 뜨거운 시간을 보내며, 밤을 지새웠습니다.
+      </p>
+      <p class="fade-in">
+        우리가 흘린 땀방울은 지역 곳곳으로 스며들어 두레생협의 든든한 토대가 되었고,
+        두레생협이라는 커다란 나무가 되었습니다.
+      </p>
+      <p class="fade-in">
+        이제 우리는 현직의 소임을 다하고 하나, 둘 물러나지만,
+        우리가 심은 신념과 가치는 오래도록 우리의 가슴 속에 살아 숨 쉬고 있습니다.
+      </p>
+      <p class="fade-in">
+        이에 우리는 지나온 열정을 추억하는 것에 그치지 않고,
+        다음과 같은 뜻을 모아 두레생산자회 동지회를 발족합니다.
+      </p>
+
+      <div class="pledge fade-in">
+        <p><strong>하나,</strong> 우리는 변함없는 우정으로 서로의 삶을 응원하는 든든한 동지가 되겠습니다. 현직 시절의 긴장감을 내려놓고, 이제는 서로의 안부를 묻고 슬픔과 기쁨을 나누는 따뜻한 친목의 장을 만들겠습니다.</p>
+      </div>
+      <div class="pledge fade-in">
+        <p><strong>하나,</strong> 우리는 두레생협의 발전을 위해 지혜를 나누는 든든한 버팀목이 되겠습니다. 우리가 현장에서 체득한 경험과 노하우가 후배 생산자들에게는 시행착오를 줄이는 이정표가 되고, 조직에게는 올바른 방향을 제시하는 자문이 되도록 하겠습니다.</p>
+      </div>
+      <div class="pledge fade-in">
+        <p><strong>하나,</strong> 우리는 생명과 협동의 가치를 전파하는 영원한 생산자로 남겠습니다. 현장을 떠나있어도 건강한 먹거리와 상생의 정신을 수호하는 두레생산자의 어른으로서 품격을 지키며 살아가겠습니다.</p>
+      </div>
+
+      <p class="fade-in" style="text-align: center; margin-top: 12px;">
+        우리 두레생산자회 동지회는<br>
+        과거와 미래를 잇는 다리가 되어,<br>
+        두레생협이 더욱 울창한 숲을 이룰 수 있도록<br>
+        함께 걷겠습니다.
+      </p>
+      <p class="fade-in" style="text-align: center;">
+        오늘 이 자리에 함께해주신<br>
+        동지 여러분의 건강과 행복을 기원하며,<br>
+        우리 모임의 힘찬 시작을 선포합니다.
+      </p>
+    </div>
+
+    <div class="declaration-date fade-in">
+      2026년 3월 19일<br>
+      <strong>두레생산자회 동지회 회원 일동</strong>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ── 임원 소개 ── -->
+  <section class="officers">
+    <h2 class="section-title fade-in">
+      동지회 임원
+      <span class="section-title-sub">함께 이끌어주실 세 분</span>
+    </h2>
+    <div class="officer-cards">
+      <div class="officer-card fade-in">
+        <div class="officer-badge president">회장</div>
+        <div>
+          <div class="officer-name">신남규</div>
+          <div class="officer-role">前 새롬식품 대표</div>
+        </div>
+      </div>
+      <div class="officer-card fade-in">
+        <div class="officer-badge secretary">총무</div>
+        <div>
+          <div class="officer-name">이경우</div>
+          <div class="officer-role">씨알살림축산 본부장</div>
+        </div>
+      </div>
+      <div class="officer-card fade-in">
+        <div class="officer-badge auditor">감사</div>
+        <div>
+          <div class="officer-name">유승호</div>
+          <div class="officer-role">강원유기농 대표</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ── 회원 명단 ── -->
+  <section class="members">
+    <h2 class="section-title fade-in">
+      함께하는 동지
+      <span class="section-title-sub">입회비를 보내주신 분들</span>
+    </h2>
+    <p class="members-intro fade-in">뜻을 함께해주신 소중한 이름들</p>
+    <div class="members-grid fade-in">
+      <span class="member-name">강대호</span>
+      <span class="member-name">강석종</span>
+      <span class="member-name">권용환</span>
+      <span class="member-name">김경순</span>
+      <span class="member-name">김문환</span>
+      <span class="member-name">김병기</span>
+      <span class="member-name">김선재</span>
+      <span class="member-name">김영관</span>
+      <span class="member-name">김영응</span>
+      <span class="member-name">김영준</span>
+      <span class="member-name">김영태</span>
+      <span class="member-name">나경엽</span>
+      <span class="member-name">남광식</span>
+      <span class="member-name">박애경</span>
+      <span class="member-name">박영학</span>
+      <span class="member-name">박창윤</span>
+      <span class="member-name">백재관</span>
+      <span class="member-name">송영규</span>
+      <span class="member-name">신남규</span>
+      <span class="member-name">신대우</span>
+      <span class="member-name">심명순</span>
+      <span class="member-name">오승현</span>
+      <span class="member-name">원혁정</span>
+      <span class="member-name">유승호</span>
+      <span class="member-name">유재관</span>
+      <span class="member-name">이경우</span>
+      <span class="member-name">이상문</span>
+      <span class="member-name">이완용</span>
+      <span class="member-name">이진선</span>
+      <span class="member-name">이창우</span>
+      <span class="member-name">장왕근</span>
+      <span class="member-name">정상진</span>
+      <span class="member-name">조광현</span>
+      <span class="member-name">조대성</span>
+      <span class="member-name">최용범</span>
+    </div>
+    <p class="members-count fade-in">35명의 동지</p>
+    <p class="members-welcome fade-in">
+      아직 함께하지 못한 분도<br>언제든 환영합니다
+    </p>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ── 입회 안내 ── -->
+  <section class="join">
+    <h2 class="section-title fade-in">
+      함께하기
+      <span class="section-title-sub">좀 더 많은 분이 함께하시면 좋겠습니다</span>
+    </h2>
+    <div class="fade-in">
+      <div class="account-box">
+        <p class="account-bank">NH농협은행</p>
+        <p class="account-number" id="accountNumber">301-0229-7187-31</p>
+        <p class="account-name">두레생산자회</p>
+        <button class="copy-btn" onclick="copyAccount()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          계좌번호 복사
+        </button>
+        <div class="copy-toast" id="copyToast">복사되었습니다!</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ── 다음 모임 ── -->
+  <section class="next-meeting">
+    <h2 class="section-title fade-in">다음 만남</h2>
+    <div class="fade-in">
+      <p class="next-meeting-text">
+        2026년 하반기에<br>
+        2차 모임이 예정되어 있습니다.
+      </p>
+      <p class="next-meeting-highlight">그때도 함께해주세요</p>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ── 공유 ── -->
+  <section class="share">
+    <div class="fade-in">
+      <p style="font-family: 'Nanum Myeongjo', serif; font-size: 0.95em; color: var(--text-light); margin-bottom: 20px;">
+        동지에게 이 소식을 전해주세요
+      </p>
+      <button class="share-btn" onclick="shareKakao()">
+        <svg viewBox="0 0 24 24" fill="#191919"><path d="M12 3C6.48 3 2 6.58 2 10.9c0 2.78 1.86 5.21 4.66 6.6l-.96 3.56c-.08.3.26.54.52.37l4.24-2.82c.5.06 1.01.09 1.54.09 5.52 0 10-3.58 10-7.9S17.52 3 12 3z"/></svg>
+        카카오톡으로 공유하기
+      </button>
+    </div>
+  </section>
+
+  <!-- ── 푸터 ── -->
+  <footer class="footer">
+    <p class="footer-slogan fade-in">함께! 고마움!</p>
+    <p class="footer-org fade-in">
+      (사)두레생산자회 동지회<br>
+      모두 건강하시고<br>
+      자주 소식 전하겠습니다.
+    </p>
+    <div class="footer-bottom"></div>
+  </footer>
+
+</div>
+
+<!-- 라이트박스 -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">&#8249;</button>
+  <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">&#8250;</button>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
+
+<!-- YouTube IFrame API -->
+<script>
+  var tag = document.createElement('script');
+  tag.src = 'https://www.youtube.com/iframe_api';
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var ytPlayer;
+  var musicPlaying = false;
+
+  function onYouTubeIframeAPIReady() {
+    ytPlayer = new YT.Player('ytPlayer', {
+      height: '1',
+      width: '1',
+      videoId: 'EkVfpCRLHyk',
+      playerVars: {
+        autoplay: 0,
+        loop: 1,
+        playlist: 'EkVfpCRLHyk',
+        controls: 0,
+        showinfo: 0,
+        modestbranding: 1
+      },
+      events: {
+        onReady: function() {},
+        onStateChange: function(e) {
+          if (e.data === YT.PlayerState.ENDED) {
+            ytPlayer.seekTo(0);
+            ytPlayer.playVideo();
+          }
+        }
+      }
+    });
+  }
+</script>
+
+<script>
+  // ══════════════════════════════
+  // 글씨 크기 조절
+  // ══════════════════════════════
+  var currentFontSize = parseInt(localStorage.getItem('dure-font-size')) || 1;
+
+  function setFontSize(size) {
+    currentFontSize = size;
+    document.body.className = 'font-size-' + size;
+    localStorage.setItem('dure-font-size', size);
+
+    // 버튼 활성화 상태 업데이트
+    document.querySelectorAll('.font-btn').forEach(function(btn, i) {
+      btn.classList.toggle('active', i === size - 1);
+    });
+  }
+
+  // 저장된 글씨 크기 적용
+  setFontSize(currentFontSize);
+
+  // ══════════════════════════════
+  // 첫 방문 가이드
+  // ══════════════════════════════
+  function closeGuide() {
+    var overlay = document.getElementById('guideOverlay');
+    overlay.style.opacity = '0';
+    overlay.style.transition = 'opacity 0.4s ease';
+    setTimeout(function() {
+      overlay.classList.add('hidden');
+    }, 400);
+    localStorage.setItem('dure-guide-seen', 'true');
+  }
+
+  // 이미 본 적 있으면 가이드 숨김
+  if (localStorage.getItem('dure-guide-seen') === 'true') {
+    document.getElementById('guideOverlay').classList.add('hidden');
+  }
+
+  // ══════════════════════════════
+  // 음악 컨트롤
+  // ══════════════════════════════
+  function toggleMusic() {
+    var btn = document.getElementById('musicBtn');
+    var playIcon = document.getElementById('playIcon');
+    var pauseIcon = document.getElementById('pauseIcon');
+    var waves = document.getElementById('musicWaves');
+    var label = document.getElementById('musicLabel');
+
+    if (!ytPlayer || !ytPlayer.playVideo) return;
+
+    if (musicPlaying) {
+      ytPlayer.pauseVideo();
+      btn.classList.remove('playing');
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      waves.style.display = 'none';
+      musicPlaying = false;
+    } else {
+      ytPlayer.playVideo();
+      btn.classList.add('playing');
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      waves.style.display = 'flex';
+      musicPlaying = true;
+
+      // 노래 제목 잠깐 표시
+      label.classList.add('show');
+      setTimeout(function() { label.classList.remove('show'); }, 3000);
+    }
+  }
+
+  // ══════════════════════════════
+  // 스크롤 애니메이션
+  // ══════════════════════════════
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-in, .fade-in-slow').forEach(function(el) {
+    observer.observe(el);
+  });
+
+  // ══════════════════════════════
+  // 키워드 감동 애니메이션
+  // ══════════════════════════════
+  var keywordTriggered = false;
+  var keywordObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting && !keywordTriggered) {
+        keywordTriggered = true;
+        triggerKeywords();
+      }
+    });
+  }, { threshold: 0.3 });
+
+  keywordObserver.observe(document.getElementById('keywordSection'));
+
+  function triggerKeywords() {
+    // 인트로 텍스트
+    document.getElementById('keywordIntro').classList.add('visible');
+
+    // 각 키워드를 딜레이에 맞춰 등장
+    var words = document.querySelectorAll('.keyword-word, .keyword-final');
+    words.forEach(function(word) {
+      var delay = parseInt(word.getAttribute('data-delay')) || 0;
+      setTimeout(function() {
+        word.classList.add('appear');
+      }, delay);
+    });
+  }
+
+  // ══════════════════════════════
+  // 계좌번호 복사
+  // ══════════════════════════════
+  function copyAccount() {
+    var accountDisplay = '301-0229-7187-31';
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(accountDisplay).then(showToast).catch(function() {
+        fallbackCopy(accountDisplay);
+      });
+    } else {
+      fallbackCopy(accountDisplay);
+    }
+  }
+
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    showToast();
+  }
+
+  function showToast() {
+    var toast = document.getElementById('copyToast');
+    toast.style.display = 'inline-block';
+    toast.style.animation = 'none';
+    toast.offsetHeight;
+    toast.style.animation = 'toastFade 2s ease forwards';
+    setTimeout(function() { toast.style.display = 'none'; }, 2200);
+  }
+
+  // ══════════════════════════════
+  // 포토 라이트박스
+  // ══════════════════════════════
+  var photos = [];
+  for (var i = 1; i <= 26; i++) {
+    var num = i < 10 ? '0' + i : '' + i;
+    photos.push('KakaoTalk_20260401_133839849_' + num + '.jpg');
+  }
+
+  var currentPhoto = 0;
+
+  function openLightbox(index) {
+    currentPhoto = index;
+    updateLightbox();
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function navigateLightbox(dir) {
+    currentPhoto = (currentPhoto + dir + photos.length) % photos.length;
+    updateLightbox();
+  }
+
+  function updateLightbox() {
+    document.getElementById('lightboxImg').src = photos[currentPhoto];
+    document.getElementById('lightboxCounter').textContent = (currentPhoto + 1) + ' / ' + photos.length;
+  }
+
+  // 라이트박스 스와이프
+  var touchStartX = 0;
+  var lightbox = document.getElementById('lightbox');
+  lightbox.addEventListener('touchstart', function(e) {
+    touchStartX = e.touches[0].clientX;
+  }, { passive: true });
+  lightbox.addEventListener('touchend', function(e) {
+    var diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      navigateLightbox(diff > 0 ? 1 : -1);
+    }
+  });
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  // ══════════════════════════════
+  // 카카오톡 공유
+  // ══════════════════════════════
+  function shareKakao() {
+    var shareData = {
+      title: '두레생산자회 동지회 창립총회',
+      text: '씨앗의 헌신으로 열매의 희망을 틔우다 - 함께 걸어온 시간, 함께 걸어갈 길',
+      url: window.location.href
+    };
+
+    if (navigator.share) {
+      navigator.share(shareData).catch(function() {});
+    } else {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(window.location.href).then(function() {
+          alert('링크가 복사되었습니다.\n카카오톡에서 붙여넣기 해주세요.');
+        });
+      } else {
+        fallbackCopy(window.location.href);
+        alert('링크가 복사되었습니다.\n카카오톡에서 붙여넣기 해주세요.');
+      }
+    }
+  }
+</script>
+
+</body>
+</html>
